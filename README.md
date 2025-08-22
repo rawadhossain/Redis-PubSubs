@@ -1,7 +1,11 @@
 # **Pub Subs**
+## High Level System
 ![alt text](images/image.png)
 
 ![alt text](images/image-1.png)
+
+## Pub Sub Implementation Demo
+![alt text](images/image-2.png)
 
 ### Subscribe to a topic
 ```bash
@@ -30,27 +34,27 @@ export class PubSubManager {
 <br>
 
 # **Initialize an empty Typescript Project**
-Initialize ```package.json```
+## Initialize ```package.json```
 ```bash
 npm init -y
 ```
 
-Initialize typescript
+## Initialize typescript
 ```bash
 npx tsc --init
 ```
 
-Configure ```tsconfig.json```
+## Configure ```tsconfig.json```
 
 ```bash
 "rootDir": "./src",
 "outDir": "./dist",
 ```
-Build typescript project
+## Build typescript project
 ```bash
 tsc -b
 ```
-Run nodejs process
+## Run nodejs process
 ```bash
 node dist/index.js
 ```
@@ -59,13 +63,13 @@ node dist/index.js
 
 # **Starting redis locally**
 
-Let’s start redis locally and start using it as a DB
+## Let’s start redis locally and start using it as a DB
 
 ```bash
 docker run --name my-redis -d -p 6379:6379 redis
 ```
 
-Connecting to your container
+## Connecting to your container
 
 ```bash
 docker exec -it container_id /bin/bash
@@ -73,7 +77,7 @@ docker exec -it container_id /bin/bash
 # docker exec -it 018wedfabefa367 /bin/bash
 ```
 
-Connecting to the redis cli
+## Connecting to the redis cli
 
 ```bash
 redis-cli

@@ -1,1 +1,1 @@
-{"root":["./src/pubsubmanager.ts","./src/index.ts"],"version":"5.9.2"}
+{"root":["./src/pubsubmanager.ts","./src/index.ts","./src/productionreadycode.ts"],"errors":true,"version":"5.9.2"}
