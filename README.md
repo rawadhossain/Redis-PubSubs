@@ -18,6 +18,8 @@ PUBLISH stocks_channel "{id: 1, ans: 'TLE'}"
 
 ## PubSub Singleton (Basic)
 ```bash
+import { createClient, RedisClientType } from "redis";
+
 export class PubSubManager {
 	private static instance: PubSubManager;
 	private redisClient: RedisClientType;
