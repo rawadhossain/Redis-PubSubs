@@ -17,11 +17,15 @@ PUBLISH stocks_channel "{id: 1, ans: 'TLE'}"
 ```
 
 ## PubSub Singleton (Basic)
-```
+```bash
 export class PubSubManager {
 	private static instance: PubSubManager;
-
-	private constructor() {}
+	private redisClient: RedisClientType;
+	
+	private constructor() {
+		this.redisClient = createClient();
+		this.redisClient.connect();
+	}
 
 	public static getInstance(): PubSubManager {
 		if (!PubSubManager.instance) {
