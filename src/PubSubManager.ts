@@ -1,4 +1,3 @@
-// Import the necessary module from the 'redis' package
 import { createClient, RedisClientType } from "redis";
 
 export class PubSubManager {
@@ -30,6 +29,8 @@ export class PubSubManager {
 		this.subscriptions.get(stock)?.push(userId);
 
 		if (this.subscriptions.get(stock)?.length === 1) {
+			// Redis puts this client into subscriber mode
+			// listener calls handleMessage whenever Redis publishes to that channel
 			this.redisClient.subscribe(stock, (message) => {
 				this.handleMessage(stock, message);
 			});
